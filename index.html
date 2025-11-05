@@ -1,111 +1,149 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hidrolavadora Portátil 48v</title>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background: #f4f4f4;
-        color: #333;
-    }
-    header {
-        background: #0573f1;
-        color: #fff;
-        padding: 20px;
-        text-align: center;
-    }
-    .container {
-        width: 92%;
-        max-width: 1000px;
-        margin: auto;
-        padding: 15px;
-    }
-    .gallery img {
-        width: 100%;
-        border-radius: 10px;
-        margin-bottom: 10px;
-    }
-    .product-info {
-        background: #fff;
-        padding: 15px;
-        border-radius: 10px;
-        margin-top: 15px;
-    }
-    form {
-        background: #fff;
-        padding: 15px;
-        border-radius: 10px;
-        margin-top: 15px;
-    }
-    input, button {
-        width: 100%;
-        padding: 12px;
-        margin-bottom: 10px;
-        border: 1px solid #ccc;
-        border-radius: 8px;
-        font-size: 16px;
-    }
-    button {
-        background: #0573f1;
-        color: #fff;
-        cursor: pointer;
-        font-weight: bold;
-    }
-    button:hover {
-        background: #005fcc;
-    }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hidrolavadora Portátil 48V</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0;font-family:'Poppins',sans-serif;}
+    body{background:#f4f6f9;color:#222;}
+    header{background:#0056ff;color:#fff;padding:35px 20px;text-align:center;}
+    header h1{font-size:28px;font-weight:700;}
+    header p{font-size:16px;margin-top:5px;}
+
+    .container{width:92%;max-width:1100px;margin:auto;padding:20px;}
+
+    .hero{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;padding:20px 0;}
+    .hero img{width:100%;max-width:450px;border-radius:15px;box-shadow:0 4px 18px rgba(0,0,0,0.1);}    
+    .hero-text{max-width:500px;padding:15px;}
+    .hero-text h2{font-size:26px;font-weight:700;color:#003ee5;margin-bottom:10px;}
+    .hero-text p{font-size:16px;margin-bottom:15px;line-height:1.5;}
+    .price-box{background:#fff;padding:15px;border-radius:12px;text-align:center;margin-bottom:10px;box-shadow:0 2px 10px rgba(0,0,0,.08);}  
+    .price-box span{font-size:15px;color:#ff2e2e;text-decoration:line-through;}
+    .price-box h3{font-size:28px;font-weight:700;color:#16b216;margin-top:5px;}
+
+    .gallery{display:flex;gap:12px;overflow-x:auto;margin-top:20px;padding-bottom:10px;}
+    .gallery img{height:220px;border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,.1);}   
+
+    .benefits{margin:25px 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px;}
+    .benefit-card{background:white;padding:18px;border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,.08);text-align:center;transition:.2s;}
+    .benefit-card:hover{transform:translateY(-3px);}  
+    .benefit-card h3{font-size:17px;margin-bottom:8px;color:#0056ff;font-weight:600;}
+    .benefit-card p{font-size:14px;color:#333;}
+
+    /* testimonials */
+    .reviews-section h2{text-align:center;font-size:26px;font-weight:700;margin:30px 0 15px;color:#003ee5;}
+    .reviews{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:15px;}
+    .review-card{background:white;padding:18px;border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,.08);} 
+    .stars{color:#ffc107;font-size:16px;margin-bottom:5px;}
+    .review-card p{font-size:14px;color:#444;margin:5px 0 10px;}
+    .review-name{font-weight:600;font-size:14px;color:#111;}
+
+    /* CTA bar */
+    .cta-bar{background:#ffcc00;padding:15px;text-align:center;border-radius:12px;font-size:18px;font-weight:600;margin:25px 0;box-shadow:0 2px 12px rgba(0,0,0,.1);} 
+
+    form{background:white;padding:25px;border-radius:12px;box-shadow:0 3px 15px rgba(0,0,0,.1);margin-top:25px;}
+    form h3{text-align:center;font-size:22px;margin-bottom:10px;color:#003ee5;font-weight:700;}
+    input,button{width:100%;padding:12px;margin:7px 0;border-radius:8px;border:1px solid #ccc;font-size:15px;}
+    button{background:#0056ff;color:#fff;border:none;font-weight:600;cursor:pointer;transition:.2s;}
+    button:hover{background:#003fcc;}
+
+    .faq{margin:30px 0;}
+    .faq h2{text-align:center;font-size:24px;color:#003ee5;margin-bottom:15px;font-weight:700;}
+    details{background:white;padding:15px;border-radius:10px;margin-bottom:10px;box-shadow:0 2px 10px rgba(0,0,0,.06);}  
+    summary{font-weight:600;cursor:pointer;}
+    details p{margin-top:8px;font-size:14px;color:#555;}
+
+    footer{text-align:center;padding:20px;font-size:14px;color:#666;margin-top:20px;}
+  </style>
 </head>
 <body>
-
 <header>
-    <h1>Hidrolavadora Portátil 48V</h1>
-    <p>¡Doble batería + envío gratis a toda Colombia!</p>
+  <h1 class="product-title">Hidrolavadora Portátil 48V</h1>
+<p class="price">💰 <strong>Precio: <span style="text-decoration:line-through;opacity:0.7;">$89.900 COP</strong></p>
+<p class="warranty">🛡️ Garantía: 30 días</p>
+<p class="warranty">🛡️ Garantía: 30 días</p>
+  <p>Potencia profesional, tamaño portátil. Pago contra entrega 💵</p>
 </header>
 
 <div class="container">
-
-    <!-- GALERÍA -->
-    <div class="gallery">
-        <img src="img/17520315466.jpg">
-        <img src="img/17520315464.jpg">
-        <img src="img/17520315465.jpg">
-        <img src="img/17520315478.jpg">
-        <img src="img/17520315451.jpg">
+  <div class="hero">
+    <img src="https://i.ibb.co/svwXf6jX" alt="Hidrolavadora Portátil">
+    <div class="hero-text">
+      <h2>Limpieza extrema en minutos 💦</h2>
+      <p>Elimina mugre, barro, moho y grasa fácilmente. Ideal para carros, motos, bicicletas, paredes, pisos, techos y más.</p>
+      <div class="price-box">
+        <span>$89.900 COP</span>
+        <h3>$89.900 COP</h3>
+      </div>
+      <p><strong>Incluye:</strong> 2 baterías 48V, manguera, espuma, 6 boquillas y más.</p>
     </div>
+  </div>
 
-    <!-- INFO -->
-    <div class="product-info">
-        <h2>💦 Hidro lavadora portátil 48v</h2>
-        <p>✔️ 6 boquillas ajustables<br>
-        ✔️ 2 baterías recargables<br>
-        ✔️ Compacta, ligera, potente<br>
-        ✔️ Ideal para autos, patios, fachadas y motos<br>
-        🚚 Envío gratis a toda Colombia<br>
-        💵 Pago contra entrega</p>
+  <div class="gallery">
+    <img src="https://i.ibb.co/6JpGzhJh" alt="Hidro 2">
+    <img src="https://i.ibb.co/YJv4M5x" alt="Hidro 3">
+    <img src="https://i.ibb.co/N6bQGj2M" alt="Hidro 4">
+    <img src="https://i.ibb.co/DfrKSnx1" alt="Hidro 5">
+  </div>
+
+  <div class="benefits">
+    <div class="benefit-card"><h3>48V Doble Batería</h3><p>Mayor potencia y duración</p></div>
+    <div class="benefit-card"><h3>Boquilla 6 en 1</h3><p>Modos de rociado profesional</p></div>
+    <div class="benefit-card"><h3>Portátil</h3><p>Sin cables, ligera y compacta</p></div>
+    <div class="benefit-card"><h3>Pago Contra Entrega</h3><p>Compra segura</p></div>
+  </div>
+
+  <div class="cta-bar">🔥 Más de 1.200 clientes felices – ¡Últimas unidades disponibles!</div>
+
+  <div class="reviews-section">
+    <h2>Opiniones de Clientes ⭐</h2>
+    <div class="reviews">
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>Excelente potencia, lavé mi carro en 15 minutos. Muy práctica.</p>
+        <div class="review-name">Carlos M. – Bogotá</div>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>Las 2 baterías duran bastante, súper recomendada.</p>
+        <div class="review-name">Andrea P. – Cali</div>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★☆</div>
+        <p>Buena presión y liviana. Llegó rápido.</p>
+        <div class="review-name">Juan S. – Medellín</div>
+      </div>
     </div>
+  </div>
 
-    <!-- FORMULARIO -->
-    <form action="https://formsubmit.co/TU-CORREO" method="POST">
-        <input type="text" name="nombre" placeholder="Nombres" required>
-        <input type="text" name="apellidos" placeholder="Apellidos" required>
-        <input type="tel" name="celular" placeholder="Celular" required>
-        <input type="text" name="direccion" placeholder="Dirección" required>
-        <input type="text" name="barrio" placeholder="Barrio" required>
-        <input type="text" name="ciudad" placeholder="Ciudad" required>
+  <form action="https://formsubmit.co/TU-CORREO-AQUI" method="POST">
+    <h3>Haz tu pedido ahora 📦</h3>
+    <input type="text" name="nombre" placeholder="Nombres" required>
+    <input type="text" name="apellidos" placeholder="Apellidos" required>
+    <input type="tel" name="telefono" placeholder="Celular" required>
+    <input type="text" name="direccion" placeholder="Dirección" required>
+    <input type="text" name="barrio" placeholder="Barrio" required>
+    <input type="text" name="ciudad" placeholder="Ciudad" required>
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_next" value="/gracias.html">
+    <button type="submit">Confirmar Pedido ✅</button>
+  </form>
 
-        <button type="submit">Realizar pedido</button>
-
-        <!-- FormSubmit config -->
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_next" value="https://TU-USUARIO.github.io/TU-REPO/confirmacion.html">
-    </form>
+  <div class="faq">
+    <h2>Preguntas Frecuentes</h2>
+    <details><summary>¿Tiene garantía?</summary><p>Sí, garantía de 3 meses por funcionamiento.</p></details>
+    <details><summary>¿Cuánto tarda el envío?</summary><p>2 a 4 días hábiles según la ciudad.</p></details>
+    <details><summary>¿Puedo pagar al recibir?</summary><p>Sí, pago contra entrega disponible en todo Colombia.</p></details>
+  </div>
 
 </div>
 
+<footer>Hidrolavadora Portátil © 2025</footer>
 </body>
 </html>
+
