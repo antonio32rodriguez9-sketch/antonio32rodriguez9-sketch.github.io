@@ -1,198 +1,168 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hidrolavadora Portátil 48V</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <style>
-    *{box-sizing:border-box;margin:0;padding:0;font-family:'Poppins',sans-serif;}
-    body{background:#f4f6f9;color:#222;}
-    header{background:#0056ff;color:#fff;padding:35px 20px;text-align:center;}
-    header h1{font-size:28px;font-weight:700;}
-    header p{font-size:16px;margin-top:5px;}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hidrolavadora Portátil 48V</title>
 
-    .container{width:92%;max-width:1100px;margin:auto;padding:20px;}
+<!-- Fuente Shopify Style -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-    .hero{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;padding:20px 0;}
-    .hero img{width:100%;max-width:450px;border-radius:15px;box-shadow:0 4px 18px rgba(0,0,0,0.1);}    
-    .hero-text{max-width:500px;padding:15px;}
-    .hero-text h2{font-size:26px;font-weight:700;color:#003ee5;margin-bottom:10px;}
-    .hero-text p{font-size:16px;margin-bottom:15px;line-height:1.5;}
-    .price-box{background:#fff;padding:15px;border-radius:12px;text-align:center;margin-bottom:10px;box-shadow:0 2px 10px rgba(0,0,0,.08);}  
-    .price-box span{font-size:15px;color:#ff2e2e;text-decoration:line-through;}
-    .price-box h3{font-size:28px;font-weight:700;color:#16b216;margin-top:5px;}
-
-    .gallery{display:flex;gap:12px;overflow-x:auto;margin-top:20px;padding-bottom:10px;}
-    .gallery img{height:220px;border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,.1);}   
-
-    .benefits{margin:25px 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px;}
-    .benefit-card{background:white;padding:18px;border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,.08);text-align:center;transition:.2s;}
-    .benefit-card:hover{transform:translateY(-3px);}  
-    .benefit-card h3{font-size:17px;margin-bottom:8px;color:#0056ff;font-weight:600;}
-    .benefit-card p{font-size:14px;color:#333;}
-
-    /* testimonials */
-    .reviews-section h2{text-align:center;font-size:26px;font-weight:700;margin:30px 0 15px;color:#003ee5;}
-    .reviews{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:15px;}
-    .review-card{background:white;padding:18px;border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,.08);} 
-    .stars{color:#ffc107;font-size:16px;margin-bottom:5px;}
-    .review-card p{font-size:14px;color:#444;margin:5px 0 10px;}
-    .review-name{font-weight:600;font-size:14px;color:#111;}
-
-    /* CTA bar */
-    .cta-bar{background:#ffcc00;padding:15px;text-align:center;border-radius:12px;font-size:18px;font-weight:600;margin:25px 0;box-shadow:0 2px 12px rgba(0,0,0,.1);} 
-
-    form{background:white;padding:25px;border-radius:12px;box-shadow:0 3px 15px rgba(0,0,0,.1);margin-top:25px;}
-    form h3{text-align:center;font-size:22px;margin-bottom:10px;color:#003ee5;font-weight:700;}
-    input,button{width:100%;padding:12px;margin:7px 0;border-radius:8px;border:1px solid #ccc;font-size:15px;}
-    button{background:#0056ff;color:#fff;border:none;font-weight:600;cursor:pointer;transition:.2s;}
-    button:hover{background:#003fcc;}
-
-    .faq{margin:30px 0;}
-    .faq h2{text-align:center;font-size:24px;color:#003ee5;margin-bottom:15px;font-weight:700;}
-    details{background:white;padding:15px;border-radius:10px;margin-bottom:10px;box-shadow:0 2px 10px rgba(0,0,0,.06);}  
-    summary{font-weight:600;cursor:pointer;}
-    details p{margin-top:8px;font-size:14px;color:#555;}
-
-    footer{text-align:center;padding:20px;font-size:14px;color:#666;margin-top:20px;}
-  </style>
-<script>
-// Temporizador 24 horas
-function startTimer(){const end=Date.now()+86400000;const el=document.getElementById("timer");setInterval(()=>{const d=end-Date.now();if(d<0){el.textContent="Oferta finalizada";return;}const h=Math.floor((d/36e5)%24),m=Math.floor((d/6e4)%60),s=Math.floor((d/1e3)%60);el.textContent=`${h}h ${m}m ${s}s`;},1e3);}window.onload=startTimer;
-// Popups compras
-const buyers=["Juan de Bogotá","Carlos de Cali","Ana de Medellín","Diana de Bucaramanga","Luis de Barranquilla"];let i=0;setInterval(()=>{const p=document.createElement("div");p.className="buy-popup";p.textContent=buyers[i%buyers.length]+" acaba de comprar ✅";document.body.appendChild(p);setTimeout(()=>p.remove(),3500);i++;},9000);
-</script>
 <style>
-.timer-box{background:#ff0000;color:#fff;text-align:center;padding:10px;font-size:20px;font-weight:bold;border-radius:8px;margin-top:10px;}
-.buy-popup{position:fixed;bottom:20px;left:20px;background:#000;color:#fff;padding:12px 18px;border-radius:8px;font-size:14px;opacity:.9;z-index:9999;animation:fade .5s;}
-@keyframes fade{from{opacity:0;}to{opacity:.9;}}
-</style>
-</head>>
-// Temporizador 24 horas
-function startTimer() {
-  const end = new Date().getTime() + 24*60*60*1000;
-  const timer = setInterval(function(){
-    const now = new Date().getTime();
-    const distance = end - now;
-    if(distance < 0){clearInterval(timer);document.getElementById("timer").innerHTML = "Oferta finalizada";return;}
-    const h = Math.floor((distance/(1000*60*60))%24);
-    const m = Math.floor((distance/(1000*60))%60);
-    const s = Math.floor((distance/1000)%60);
-    document.getElementById("timer").innerHTML = h+"h "+m+"m "+s+"s";
-  },1000);
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:#f5f7fa;color:#222;}
+
+/* HEADER */
+header{background:#0056ff;color:#fff;text-align:center;padding:30px;}
+header h1{font-size:27px;font-weight:700;}
+header p{margin-top:5px}
+
+/* TIMER */
+.timer{background:#ff4747;color:#fff;padding:10px;text-align:center;font-size:16px;font-weight:bold}
+
+/* STOCK */
+.stock-box{text-align:center;font-size:18px;margin-top:8px;color:#008000;font-weight:600}
+
+/* HERO */
+.container{width:92%;max-width:1100px;margin:auto;padding:20px;}
+.hero{display:flex;flex-wrap:wrap;align-items:center;gap:20px;}
+.hero img{width:100%;max-width:420px;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,0.1)}
+.hero-text{max-width:500px}
+.hero-text h2{font-size:24px;color:#003ee5;margin-bottom:10px;}
+.price-box{background:#fff;padding:15px;border-radius:10px;text-align:center;margin:10px 0;box-shadow:0 2px 10px rgba(0,0,0,.08);}
+.price-box span{text-decoration:line-through;color:#ff3131;}
+.price-box h3{color:#0bb80b;font-size:28px;margin-top:5px}
+
+/* GALLERY */
+.gallery{display:flex;gap:10px;overflow-x:auto;margin-top:10px;padding-bottom:5px;}
+.gallery img{height:210px;border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,.1);}
+
+/* BENEFITS */
+.benefits{margin:25px 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;}
+.benefit-card{background:#fff;padding:15px;border-radius:10px;text-align:center;box-shadow:0 2px 10px rgba(0,0,0,.05);}
+
+/* REVIEWS */
+.reviews-section h2{text-align:center;color:#003ee5;margin:25px 0 10px;font-size:24px;}
+.reviews{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:15px;}
+.review-card{background:white;padding:15px;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,.08);}
+.stars{color:#ffc107;font-size:18px}
+
+/* POPUP BUY NOTIFICATIONS */
+.buy-popup{
+  position:fixed;bottom:20px;left:20px;background:white;padding:12px 14px;
+  border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,.2);font-size:14px;display:none;
 }
-window.onload = startTimer;
 
-// Pop-ups compras recientes
-const buyers=["Juan de Bogotá","Carlos de Cali","Ana de Medellín","Diana de Bucaramanga","Luis de Barranquilla"];let i=0;
-setInterval(()=>{
-  const popup=document.createElement("div");
-  popup.className="buy-popup";
-  popup.textContent = buyers[i%buyers.length] + " acaba de comprar ✅";
-  document.body.appendChild(popup);
-  setTimeout(()=>popup.remove(),3500);
-  i++;
-},9000);
-</script>
-<style>
-.timer-box{background:#ff0000;color:#fff;text-align:center;padding:10px;font-size:20px;font-weight:bold;border-radius:8px;margin-top:10px;}
-.buy-popup{position:fixed;bottom:20px;left:20px;background:#000;color:#fff;padding:12px 18px;border-radius:8px;font-size:14px;opacity:.9;z-index:9999;animation:fade .5s;}
-@keyframes fade{from{opacity:0;}to{opacity:
+/* FORM */
+form{background:white;padding:25px;border-radius:10px;margin-top:20px;box-shadow:0 2px 12px rgba(0,0,0,.1);}
+form h3{text-align:center;margin-bottom:10px;color:#003ee5}
+input,button{width:100%;padding:12px;margin:6px 0;border-radius:8px;border:1px solid #ccc}
+button{background:#0056ff;color:white;font-weight:600;cursor:pointer}
+
+/* FOOTER */
+footer{text-align:center;padding:20px;color:#666;margin-top:20px;font-size:14px}
+</style>
+</head>
+
 <body>
+
 <header>
-  <h1 class="product-title">Hidrolavadora Portátil 48V</h1>
-<p class="price">💰 <strong>Precio: <span style="text-decoration:line-through;opacity:0.7;">$89.900 COP</strong></p><div id="timer" class="timer-box"></div>
-<div class="cta-bar">🛡️ Garantía: 30 días</p>
-<p class="warranty">🛡️ Garantía: 30 días</p>
-  <p>Potencia profesional, tamaño portátil. Pago contra entrega 💵</p>
+<h1>Hidrolavadora Portátil 48V</h1>
+<p>Pago contra entrega ✅</p>
 </header>
 
+<div class="timer" id="countdown">Oferta termina en: 00:00:00</div>
+<div class="stock-box" id="stockBox"></div>
+
 <div class="container">
-  <div class="hero">
-    <img src="https://i.ibb.co/svwXf6jX" alt="Hidrolavadora Portátil">
-    <div class="hero-text">
-      <h2>Limpieza extrema en minutos 💦</h2>
-      <p>Elimina mugre, barro, moho y grasa fácilmente. Ideal para carros, motos, bicicletas, paredes, pisos, techos y más.</p>
-      <div class="price-box">
-        <span>$89.900 COP</span>
-        <h3>$89.900 COP</h3>
-      </div>
-      <p><strong>Incluye:</strong> 2 baterías 48V, manguera, espuma, 6 boquillas y más.</p>
-    </div>
-  </div>
+<div class="hero">
+<img src="https://i.ibb.co/fYpTgnMT/17520315466.jpg">
+<div class="hero-text">
+<h2>Limpieza extrema en minutos 💦</h2>
+<p>La hidrolavadora portátil más potente del mercado.</p>
 
-  <div class="gallery">
-    <img src="https://i.ibb.co/6JpGzhJh" alt="Hidro 2">
-    <img src="https://i.ibb.co/YJv4M5x" alt="Hidro 3">
-    <img src="https://i.ibb.co/N6bQGj2M" alt="Hidro 4">
-    <img src="https://i.ibb.co/DfrKSnx1" alt="Hidro 5">
-  </div>
+<div class="price-box">
+<span>$199.900 COP</span>
+<h3>$89.900 COP</h3>
+</div>
 
-  <div class="benefits">
-    <div class="benefit-card"><h3>48V Doble Batería</h3><p>Mayor potencia y duración</p></div>
-    <div class="benefit-card"><h3>Boquilla 6 en 1</h3><p>Modos de rociado profesional</p></div>
-    <div class="benefit-card"><h3>Portátil</h3><p>Sin cables, ligera y compacta</p></div>
-    <div class="benefit-card"><h3>Pago Contra Entrega</h3><p>Compra segura</p></div>
-  </div>
+<p><strong>Incluye:</strong> 2 baterías 48V + espuma + boquillas + manguera</p>
+</div>
+</div>
 
-  <div class="cta-bar">�es felices – ¡Últimas unidades disponibles!</div>
+<!-- GALLERY -->
+<div class="gallery">
+<img src="https://i.ibb.co/93fB6X3X/17520315464.jpg">
+<img src="https://i.ibb.co/fZmV53s/17520315465.jpg">
+<img src="https://i.ibb.co/yn7GxyFr/17520315478.jpg">
+<img src="https://i.ibb.co/hFY8tvPg/17520315451.jpg">
+</div>
 
-  <div class="reviews-section">
-    <h2>Opiniones de Clientes ⭐</h2>
-    <div class="reviews">
-      <div class="review-card">
-        <div class="stars">★★<!-- Reseñas extra -->
+<!-- BENEFITS -->
+<div class="benefits">
+<div class="benefit-card">🔋 Doble Batería 48V</div>
+<div class="benefit-card">💦 Boquilla 6 en 1</div>
+<div class="benefit-card">🚗 Ideal autos & motos</div>
+<div class="benefit-card">📦 Pago contra entrega</div>
+</div>
+
+<!-- REVIEWS -->
 <div class="reviews-section">
+<h2>Clientes felices ⭐</h2>
 <div class="reviews">
-<div class="review-card"><div class="stars">★★★★★</div><p>Me llegó en 2 días, excelente presión para el carro.</p><div class="review-name">Felipe R. – Pereira</div></div>
-<div class="review-card"><div class="stars">★★★★★</div><p>Lavé la terraza completa, super útil.</p><div class="review-name">Natalia G. – Bogotá</div></div>
-<div class="review-card"><div class="stars">★★★★☆</div><p>Muy buena, la batería dura bastante.</p><div class="review-name">Kevin L. – Bucaramanga</div></div>
+<div class="review-card"><div class="stars">★★★★★</div>Excelente potencia, la amo! — Laura, Bogotá</div>
+<div class="review-card"><div class="stars">★★★★★</div>Súper práctica para mi moto — Diego, Cali</div>
+<div class="review-card"><div class="stars">★★★★☆</div>Llegó rápido y funciona top — Sofía, Medellín</div>
 </div>
 </div>
 
-<div class=  <p>Excelente potencia, lavé mi carro en 15 minutos. Muy práctica.</p>
-        <div class="review-name">Carlos M. – Bogotá</div>
-      </div>
-      <div class="review-card">
-        <div class="stars">★★★★★</div>
-        <p>Las 2 baterías duran bastante, súper recomendada.</p>
-        <div class="review-name">Andrea P. – Cali</div>
-      </div>
-      <div class="review-card">
-        <div class="stars">★★★★☆</div>
-        <p>Buena presión y liviana. Llegó rápido.</p>
-        <div class="review-name">Juan S. – Medellín</div>
-      </div>
-    </div>
-  </div>
+<!-- FORM -->
+<form action="https://formsubmit.co/TU-CORREO-AQUI" method="POST">
+<h3>Haz tu pedido ahora 📦</h3>
+<input name="nombre" placeholder="Nombres" required>
+<input name="telefono" placeholder="Celular" required>
+<input name="direccion" placeholder="Dirección" required>
+<input name="ciudad" placeholder="Ciudad" required>
 
-  <form action="https://formsubmit.co/TU-CORREO-AQUI" method="POST">
-    <h3>Haz tu pedido ahora 📦</h3>
-    <input type="text" name="nombre" placeholder="Nombres" required>
-    <input type="text" name="apellidos" placeholder="Apellidos" required>
-    <input type="tel" name="telefono" placeholder="Celular" required>
-    <input type="text" name="direccion" placeholder="Dirección" required>
-    <input type="text" name="barrio" placeholder="Barrio" required>
-    <input type="text" name="ciudad" placeholder="Ciudad" required>
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_template" value="table">
-    <input type="hidden" name="_next" value="/gracias.html">
-    <button type="submit">Confirmar Pedido ✅</button>
-  </form>
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_next" value="gracias.html">
 
-  <div class="faq">
-    <h2>Preguntas Frecuentes</h2>
-    <details><summary>¿Tiene garantía?</summary><p>Sí, garantía de 3 meses por funcionamiento.</p></details>
-    <details><summary>¿Cuánto tarda el envío?</summary><p>2 a 4 días hábiles según la ciudad.</p></details>
-    <details><summary>¿Puedo pagar al recibir?</summary><p>Sí, pago contra entrega disponible en todo Colombia.</p></details>
-  </div>
-
+<button>Comprar ahora ✅</button>
+</form>
 </div>
 
 <footer>Hidrolavadora Portátil © 2025</footer>
+
+<!-- POPUP BUY SCRIPT -->
+<div id="popup" class="buy-popup"></div>
+
+<script>
+// Stock dinámico
+let stock = Math.floor(Math.random() * 8) + 6;
+document.getElementById("stockBox").innerHTML = "📦 Stock disponible: " + stock + " unidades";
+
+// Timer
+let time = 3600;
+setInterval(()=>{
+  time--;
+  let h = String(Math.floor(time/3600)).padStart(2,"0");
+  let m = String(Math.floor((time%3600)/60)).padStart(2,"0");
+  let s = String(time%60).padStart(2,"0");
+  document.getElementById("countdown").innerHTML = `Oferta termina en: ${h}:${m}:${s}`;
+},1000);
+
+// Fake purchases popup
+const buyers=["Juan - Bogotá","Maria - Cali","Carlos - Medellín","Luisa - Bucaramanga","Andrés - Barranquilla"];
+function showPopup(){
+ let name = buyers[Math.floor(Math.random()*buyers.length)];
+ let div = document.getElementById("popup");
+ div.innerHTML = name + " acaba de comprar ✅";
+ div.style.display="block";
+ setTimeout(()=>{div.style.display="none"},3000);
+}
+setInterval(showPopup,7000);
+</script>
+
 </body>
 </html>
-
