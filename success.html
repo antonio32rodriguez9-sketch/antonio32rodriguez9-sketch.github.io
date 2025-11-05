@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Gracias por tu compra</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f6f6f6;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+    }
+
+    .container {
+        background: #fff;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        max-width: 400px;
+        width: 90%;
+        animation: fadeIn .7s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+        0% {opacity: 0; transform: scale(.95);}
+        100% {opacity: 1; transform: scale(1);}
+    }
+
+    h1 {
+        font-size: 24px;
+        color: #222;
+        margin-bottom: 10px;
+    }
+
+    p {
+        color: #444;
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .check {
+        font-size: 50px;
+        color: #28a745;
+        margin-bottom: 10px;
+    }
+
+    .btn {
+        display: inline-block;
+        background: #000;
+        color: #fff;
+        padding: 12px 20px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: .3s;
+    }
+
+    .btn:hover {
+        background: #333;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="check">✅</div>
+    <h1>¡Gracias por tu compra!</h1>
+    <p>Hemos recibido tu pedido con éxito.<br>
+    En breve uno de nuestros asesores se comunicará contigo.</p>
+
+    <a href="index.html" class="btn">Volver a la tienda</a>
+</div>
+
+</body>
+</html>
