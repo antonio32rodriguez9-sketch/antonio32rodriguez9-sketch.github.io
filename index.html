@@ -59,12 +59,53 @@
 
     footer{text-align:center;padding:20px;font-size:14px;color:#666;margin-top:20px;}
   </style>
-</head>
+<script>
+// Temporizador 24 horas
+function startTimer(){const end=Date.now()+86400000;const el=document.getElementById("timer");setInterval(()=>{const d=end-Date.now();if(d<0){el.textContent="Oferta finalizada";return;}const h=Math.floor((d/36e5)%24),m=Math.floor((d/6e4)%60),s=Math.floor((d/1e3)%60);el.textContent=`${h}h ${m}m ${s}s`;},1e3);}window.onload=startTimer;
+// Popups compras
+const buyers=["Juan de Bogotá","Carlos de Cali","Ana de Medellín","Diana de Bucaramanga","Luis de Barranquilla"];let i=0;setInterval(()=>{const p=document.createElement("div");p.className="buy-popup";p.textContent=buyers[i%buyers.length]+" acaba de comprar ✅";document.body.appendChild(p);setTimeout(()=>p.remove(),3500);i++;},9000);
+</script>
+<style>
+.timer-box{background:#ff0000;color:#fff;text-align:center;padding:10px;font-size:20px;font-weight:bold;border-radius:8px;margin-top:10px;}
+.buy-popup{position:fixed;bottom:20px;left:20px;background:#000;color:#fff;padding:12px 18px;border-radius:8px;font-size:14px;opacity:.9;z-index:9999;animation:fade .5s;}
+@keyframes fade{from{opacity:0;}to{opacity:.9;}}
+</style>
+</head>>
+// Temporizador 24 horas
+function startTimer() {
+  const end = new Date().getTime() + 24*60*60*1000;
+  const timer = setInterval(function(){
+    const now = new Date().getTime();
+    const distance = end - now;
+    if(distance < 0){clearInterval(timer);document.getElementById("timer").innerHTML = "Oferta finalizada";return;}
+    const h = Math.floor((distance/(1000*60*60))%24);
+    const m = Math.floor((distance/(1000*60))%60);
+    const s = Math.floor((distance/1000)%60);
+    document.getElementById("timer").innerHTML = h+"h "+m+"m "+s+"s";
+  },1000);
+}
+window.onload = startTimer;
+
+// Pop-ups compras recientes
+const buyers=["Juan de Bogotá","Carlos de Cali","Ana de Medellín","Diana de Bucaramanga","Luis de Barranquilla"];let i=0;
+setInterval(()=>{
+  const popup=document.createElement("div");
+  popup.className="buy-popup";
+  popup.textContent = buyers[i%buyers.length] + " acaba de comprar ✅";
+  document.body.appendChild(popup);
+  setTimeout(()=>popup.remove(),3500);
+  i++;
+},9000);
+</script>
+<style>
+.timer-box{background:#ff0000;color:#fff;text-align:center;padding:10px;font-size:20px;font-weight:bold;border-radius:8px;margin-top:10px;}
+.buy-popup{position:fixed;bottom:20px;left:20px;background:#000;color:#fff;padding:12px 18px;border-radius:8px;font-size:14px;opacity:.9;z-index:9999;animation:fade .5s;}
+@keyframes fade{from{opacity:0;}to{opacity:
 <body>
 <header>
   <h1 class="product-title">Hidrolavadora Portátil 48V</h1>
-<p class="price">💰 <strong>Precio: <span style="text-decoration:line-through;opacity:0.7;">$89.900 COP</strong></p>
-<p class="warranty">🛡️ Garantía: 30 días</p>
+<p class="price">💰 <strong>Precio: <span style="text-decoration:line-through;opacity:0.7;">$89.900 COP</strong></p><div id="timer" class="timer-box"></div>
+<div class="cta-bar">🛡️ Garantía: 30 días</p>
 <p class="warranty">🛡️ Garantía: 30 días</p>
   <p>Potencia profesional, tamaño portátil. Pago contra entrega 💵</p>
 </header>
@@ -97,14 +138,22 @@
     <div class="benefit-card"><h3>Pago Contra Entrega</h3><p>Compra segura</p></div>
   </div>
 
-  <div class="cta-bar">🔥 Más de 1.200 clientes felices – ¡Últimas unidades disponibles!</div>
+  <div class="cta-bar">�es felices – ¡Últimas unidades disponibles!</div>
 
   <div class="reviews-section">
     <h2>Opiniones de Clientes ⭐</h2>
     <div class="reviews">
       <div class="review-card">
-        <div class="stars">★★★★★</div>
-        <p>Excelente potencia, lavé mi carro en 15 minutos. Muy práctica.</p>
+        <div class="stars">★★<!-- Reseñas extra -->
+<div class="reviews-section">
+<div class="reviews">
+<div class="review-card"><div class="stars">★★★★★</div><p>Me llegó en 2 días, excelente presión para el carro.</p><div class="review-name">Felipe R. – Pereira</div></div>
+<div class="review-card"><div class="stars">★★★★★</div><p>Lavé la terraza completa, super útil.</p><div class="review-name">Natalia G. – Bogotá</div></div>
+<div class="review-card"><div class="stars">★★★★☆</div><p>Muy buena, la batería dura bastante.</p><div class="review-name">Kevin L. – Bucaramanga</div></div>
+</div>
+</div>
+
+<div class=  <p>Excelente potencia, lavé mi carro en 15 minutos. Muy práctica.</p>
         <div class="review-name">Carlos M. – Bogotá</div>
       </div>
       <div class="review-card">
